@@ -5,10 +5,10 @@ const api = Router();
 const home = (req, res) => {
   try {
     res.status(200).json({
-      message: "Welcome to Marybngozi Portfolio API",
+      message: "Welcome to Dhabs Portfolio API",
       data: {
-        projectName: "MaryBlessing Chimagbanwe Ngozichukwu Umeh",
-        author: "marybngozi",
+        projectName: "Daberechi Uzoh",
+        author: "Dhabs",
       },
     });
   } catch (e) {

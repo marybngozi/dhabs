@@ -1,91 +1,68 @@
 <template>
-  <div class="home">
-    <button @click="menuClicked = !menuClicked" class="menuBtn">
-      <Hamburger :clicked="menuClicked" />
-    </button>
+  <div id="body" class="body">
+    <div class="flex justify-center mt-16">
+      <Logo class="" />
+    </div>
 
-    <transition>
-      <SideNav class="sidenav" />
-    </transition>
+    <div class="flex items-center justify-center">
+      <p class="text-sm md:text-xl">
+        Hi, my name is Dhabs, I'm a Ui/Ux designer
+      </p>
+    </div>
 
-    <main>
-      <HomeTop />
+    <nav class="flex flex-col justify-center">
+      <div>
+        <router-link class="link-big text-4xl md:text-5xl" to="/about"
+          >About me</router-link
+        >
+      </div>
+      <div>
+        <router-link class="link-big text-4xl md:text-5xl" to="/"
+          >Works</router-link
+        >
+      </div>
+      <div>
+        <router-link class="link-big text-4xl md:text-5xl" to="/"
+          >Contact</router-link
+        >
+      </div>
+    </nav>
 
-      <HomePortfolio class="" />
-
-      <HomeAbout class="mt-16" />
-
-      <HomeBlogs class="mt-16" />
-
-      <HomeBottom class="mt-16" />
-    </main>
+    <div class="mx-auto">
+      <SwitchBtn />
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "IndexPage",
-
-  data() {
-    return {
-      menuClicked: false,
-    };
-  },
-
-  watch: {
-    menuClicked() {
-      document.querySelector(".sidenav").classList.toggle("show");
-    },
-  },
 };
 </script>
 <style scoped>
-.home {
-  background: #001528 !important;
+.body {
+  /* margin-top: 70px; */
+  display: grid;
   height: 100vh;
-  width: 100%;
-  overflow-y: clip;
-  @apply font-lato block lg:flex lg:justify-between pb-6;
+  overflow-y: hidden;
+  grid-template-rows: 20vh 10vh 50vh 10vh;
+  justify-content: center;
+  text-align: center;
 }
-.home::before {
-  content: "";
-  background-image: url("/bg.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right top;
-  width: 100%;
-  height: 90%;
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  /* z-index: -1; */
-  pointer-events: none;
-  opacity: 0.5;
+p {
+  font-family: "SFGothican";
+  font-style: normal;
+  font-weight: 700;
+  color: #3f3f3e;
 }
-.sidenav {
-  @apply hidden lg:block fixed top-0 bottom-0 left-0 lg:static;
-  height: 100vh;
-  width: 9.188rem;
-  overflow-y: clip;
-  z-index: 2000;
+nav div {
+  height: calc(40vh / 3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.sidenav.show {
-  @apply block;
-}
-.menuBtn {
-  background-color: rgba(8, 8, 8, 0.88);
-  @apply block lg:hidden fixed right-5 top-5 px-3 pt-3 pb-2 z-9999;
-}
-main {
-  width: 100vw;
-  height: 100%;
-  overflow-y: scroll;
-}
-@media (min-width: 1024px) {
-  main {
-    width: calc(100vw - 9.2rem);
-  }
+.link-big {
+  font-family: "BebasNeue";
+  text-transform: uppercase;
 }
 </style>
