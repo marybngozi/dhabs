@@ -45,6 +45,5 @@ p {
   font-size: 18px;
   font-weight: 750;
   line-height: 31px;
-  color: #161515;
 }
 </style>

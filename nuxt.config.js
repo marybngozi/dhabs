@@ -26,9 +26,7 @@ export default {
   css: ["@/assets/css/main.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    { src: "~/plugins/vuex-persist", ssr: false },
-  ],
+  plugins: [{ src: "~/plugins/vuex-persist", ssr: false }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -37,6 +35,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     "@nuxtjs/tailwindcss",
+    "@nuxtjs/color-mode",
     "@nuxtjs/fontawesome",
   ],
 
@@ -57,6 +56,11 @@ export default {
       solid: true,
       brands: true,
     },
+  },
+
+  colorMode: {
+    preference: "dark",
+    fallback: "dark",
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

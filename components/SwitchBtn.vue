@@ -18,6 +18,7 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
 export default {
   name: "SwitchBtn",
   props: {
@@ -29,7 +30,6 @@ export default {
       type: String,
       default: "On",
     },
-
     labelDisableText: {
       type: String,
       default: "Off",
@@ -45,7 +45,8 @@ export default {
   },
   data() {
     return {
-      currentState: this.defaultState,
+      currentState:
+        this.$colorMode && this.$colorMode.value == "dark" ? false : true,
     };
   },
   watch: {
@@ -53,10 +54,20 @@ export default {
       this.currentState = Boolean(this.defaultState);
     },
   },
+  created() {
+    if (this.$colorMode.preference == "system") {
+      this.$colorMode.preference == "dark";
+      this.$colorMode.value == "dark";
+    }
+
+    this.setTheme(this.$colorMode.value);
+
+    console.log("rfopdfo", this.$colorMode.value);
+
+    this.currentState =
+      this.$colorMode && this.$colorMode.value == "dark" ? false : true;
+  },
   computed: {
-    // currentState() {
-    //     return this.defaultState;
-    // },
     isActive() {
       return this.currentState;
     },
@@ -72,8 +83,19 @@ export default {
       },
       set(newValue) {
         this.currentState = newValue;
-        this.$emit("change", newValue);
+        // this.$emit("change", newValue);
+        this.changeTheme();
       },
+    },
+  },
+  methods: {
+    ...mapMutations(["setTheme"]),
+
+    changeTheme() {
+      const colorMode = this.$colorMode.value == "dark" ? "light" : "dark";
+
+      this.$colorMode.preference = colorMode;
+      this.setTheme(colorMode);
     },
   },
 };
