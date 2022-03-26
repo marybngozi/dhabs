@@ -113,16 +113,19 @@ export default {
 
 <style scoped>
 .spin {
-  animation: rotate 1.2s linear infinite;
+  animation: rotate 1.6s ease infinite;
   transform-origin: center;
   transform-box: fill-box;
 }
 @keyframes rotate {
-  from {
-    transform: rotateZ(360deg) scale(0.8);
+  0% {
+    transform: rotateZ(45deg) scale(0.8);
   }
-  to {
-    transform: rotateZ(0deg) scale(0.8);
+  50% {
+    transform: rotateZ(-45deg) scale(0.8);
+  }
+  100% {
+    transform: rotateZ(45deg) scale(0.8);
   }
 }
 </style>

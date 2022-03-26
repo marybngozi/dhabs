@@ -1,18 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer components {
-  .btn-outline {
-    border: 1px solid #6ef4ac;
-    background-color: #001528;
-    color: #6ef4ac;
-    padding: 0.625rem 0.7rem;
-  }
-  .btn-solid {
-    border: 1px solid #6ef4ac;
-    background-color: #6ef4ac;
-    color: #0f1e2c;
-    padding: 0.625rem 0.7rem;
-  }
-}

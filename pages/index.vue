@@ -17,12 +17,12 @@
         >
       </div>
       <div>
-        <router-link class="link-big text-4xl md:text-5xl" to="/"
+        <router-link class="link-big text-4xl md:text-5xl" to="works/"
           >Works</router-link
         >
       </div>
       <div>
-        <router-link class="link-big text-4xl md:text-5xl" to="/"
+        <router-link class="link-big text-4xl md:text-5xl" to="/contact"
           >Contact</router-link
         >
       </div>
