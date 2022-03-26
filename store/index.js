@@ -4,7 +4,6 @@ export const state = () => ({
 
 export const mutations = {
   setTheme(state, theme) {
-    console.log({ theme });
     state.theme = theme;
   },
 };

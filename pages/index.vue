@@ -1,16 +1,16 @@
 <template>
   <div id="body" class="body">
     <div class="flex justify-center mt-16">
-      <Logo class="" />
+      <Logo />
     </div>
 
     <div class="flex items-center justify-center">
       <p class="text-sm md:text-xl">
-        Hi, my name is Dhabs, I'm a Ui/Ux designer
+        Hi, my name is Dhabs, I'm a UI/UX designer
       </p>
     </div>
 
-    <nav class="flex flex-col justify-center">
+    <nav class="flex flex-col justify-center items-center">
       <div>
         <router-link class="link-big text-4xl md:text-5xl" to="/about"
           >About me</router-link
@@ -28,7 +28,7 @@
       </div>
     </nav>
 
-    <div class="mx-auto">
+    <div class="flex flex-col justify-center items-center">
       <SwitchBtn />
     </div>
   </div>
@@ -64,5 +64,9 @@ nav div {
 .link-big {
   font-family: "BebasNeue";
   text-transform: uppercase;
+}
+.link-big:hover,
+.link-big:active {
+  color: var(--font-active);
 }
 </style>

@@ -1,18 +1,13 @@
 <template>
-  <div
-    :for="id + '_button'"
-    :class="{ active: isActive }"
-    class="toggle__button"
-  >
-    <!-- <span v-if="isActive" class="toggle__label">{{ enableText }}</span>
-    <span v-if="!isActive" class="toggle__label">{{ disabledText }}</span> -->
-
+  <div :for="id + '_button'" :class="{ active: isDark }" class="toggle__button">
     <input
       type="checkbox"
       :disabled="disabled"
       :id="id + '_button'"
-      v-model="checkedValue"
+      :checked="isDark"
+      @change="changeTheme"
     />
+    <!-- v-model="checkedValue" -->
     <span class="toggle__switch"></span>
   </div>
 </template>
@@ -26,33 +21,13 @@ export default {
       type: Boolean,
       default: false,
     },
-    labelEnableText: {
-      type: String,
-      default: "On",
-    },
-    labelDisableText: {
-      type: String,
-      default: "Off",
-    },
     id: {
       type: String,
       default: "primary",
     },
-    defaultState: {
-      type: Boolean,
-      default: false,
-    },
   },
   data() {
-    return {
-      currentState:
-        this.$colorMode && this.$colorMode.value == "dark" ? false : true,
-    };
-  },
-  watch: {
-    defaultState: function defaultState() {
-      this.currentState = Boolean(this.defaultState);
-    },
+    return {};
   },
   created() {
     if (this.$colorMode.preference == "system") {
@@ -61,29 +36,17 @@ export default {
     }
 
     this.setTheme(this.$colorMode.value);
-
-    console.log("rfopdfo", this.$colorMode.value);
-
-    this.currentState =
-      this.$colorMode && this.$colorMode.value == "dark" ? false : true;
   },
   computed: {
-    isActive() {
-      return this.currentState;
-    },
-    enableText() {
-      return this.labelEnableText;
-    },
-    disabledText() {
-      return this.labelDisableText;
+    isDark() {
+      return this.$colorMode && this.$colorMode.value == "light" ? false : true;
     },
     checkedValue: {
       get() {
-        return this.currentState;
+        return this.isDark;
       },
       set(newValue) {
-        this.currentState = newValue;
-        // this.$emit("change", newValue);
+        this.isDark = newValue;
         this.changeTheme();
       },
     },
@@ -92,10 +55,10 @@ export default {
     ...mapMutations(["setTheme"]),
 
     changeTheme() {
-      const colorMode = this.$colorMode.value == "dark" ? "light" : "dark";
+      const newColorMode = this.$colorMode.value == "dark" ? "light" : "dark";
 
-      this.$colorMode.preference = colorMode;
-      this.setTheme(colorMode);
+      this.$colorMode.preference = newColorMode;
+      this.setTheme(newColorMode);
     },
   },
 };
@@ -115,7 +78,7 @@ div {
 .toggle__button input[type="checkbox"] {
   opacity: 0;
   position: absolute;
-  width: 120%;
+  width: 100%;
   height: 47px;
   z-index: 2;
   cursor: pointer;
@@ -128,7 +91,6 @@ div {
   background: #161515;
   box-shadow: inset 0 0 1px #bfcbd9;
   position: relative;
-  margin-left: 10px;
   transition: all 0.25s;
 }
 .toggle__button .toggle__switch::after,
@@ -150,16 +112,28 @@ div {
   background-image: url("/light-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
+  box-shadow: 0 0 1px #fff;
+}
+.toggle__button .toggle__switch::before {
+  background: #231f20;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+}
+/* .toggle__button .toggle__switch::after {
+  background: #fff;
+  background-image: url("/light-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
   box-shadow: 0 0 1px #666;
 }
 .toggle__button .toggle__switch::before {
   background: #fff;
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
   opacity: 0;
-}
+} */
 .active .toggle__switch {
   background: #fff;
-  box-shadow: inset 0 0 1px #080808;
+  box-shadow: inset 0 0 1px #d4d4d4;
 }
 .active .toggle__switch::after,
 .active .toggle__switch::before {
@@ -167,10 +141,10 @@ div {
 }
 .active .toggle__switch::after {
   left: 23px;
-  background: #231f20;
+  background: #161515;
   background-image: url("/dark-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
-  box-shadow: 0 0 1px #fff;
+  box-shadow: 0 0 1px #666;
 }
 </style>

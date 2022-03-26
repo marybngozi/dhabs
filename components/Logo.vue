@@ -8,7 +8,7 @@
       xmlns="http://www.w3.org/2000/svg"
     >
       <g id="logo_white" filter="url(#filter0_d_206_10)">
-        <g id="arrow">
+        <g id="arrow" :class="loading ? 'spin' : ''">
           <path
             id="Vector"
             d="M46.3948 50.9082V128.614L15.2582 106.314V56.315L24.9397 54.51V102.261L36.4507 109.243V52.7132L46.3948 50.9082ZM50.6612 46.3136L45.5415 47.2407L35.5975 49.0457L32.1925 49.6611V52.7132V102.105L29.2061 100.292V54.5182V49.8908L24.0618 50.8508L14.3803 52.6558L11 53.2875V56.3232V106.322V108.103L12.5671 109.227L43.7036 131.527L50.653 136.507V128.622V50.9082V46.3136H50.6612Z"
@@ -119,10 +119,10 @@ export default {
 }
 @keyframes rotate {
   from {
-    transform: rotateZ(360deg) scale(0.9);
+    transform: rotateZ(360deg) scale(0.8);
   }
   to {
-    transform: rotateZ(0deg) scale(0.9);
+    transform: rotateZ(0deg) scale(0.8);
   }
 }
 </style>
