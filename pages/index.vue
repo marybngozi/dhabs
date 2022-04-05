@@ -53,7 +53,7 @@ p {
   font-family: "SFGothican";
   font-style: normal;
   font-weight: 700;
-  color: #3f3f3e;
+  color: var(--font-gray);
 }
 nav div {
   height: calc(40vh / 3);

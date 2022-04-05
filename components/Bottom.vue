@@ -4,9 +4,9 @@
   >
     <div class="flex justify-center flex-col items-center md:items-start">
       <h6 class="t-gray">Let's connect</h6>
-      <div class="flex gap-4 order-1">
+      <div class="flex gap-5 order-1">
         <a
-          href="https://twitter.com/marybngozi"
+          href="mailto:uzohdaberechi@gmail.com"
           target="_blank"
           class="social-link"
         >
@@ -15,22 +15,22 @@
           </span>
         </a>
 
-        <a href="https://twitter.com/marybngozi" target="_blank">
+        <a href="https://twitter.com/UzohDhabs" target="_blank">
           <span class="icon">
             <font-awesome-icon :icon="['fab', 'twitter']" />
           </span>
         </a>
-        <a href="https://twitter.com/marybngozi" target="_blank">
+        <a href="https://instagram.com/uzohdhabs" target="_blank">
           <span class="icon">
             <font-awesome-icon :icon="['fab', 'instagram']" />
           </span>
         </a>
-        <a href="https://twitter.com/marybngozi" target="_blank">
+        <a href="https://linkedin.com/in/uzohdhabslinked" target="_blank">
           <span class="icon">
             <font-awesome-icon :icon="['fab', 'linkedin']" />
           </span>
         </a>
-        <a href="https://twitter.com/marybngozi" target="_blank">
+        <a href="https://behance.net/uzohdhabs" target="_blank">
           <span class="icon">
             <font-awesome-icon :icon="['fab', 'behance-square']" />
           </span>

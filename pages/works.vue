@@ -26,18 +26,21 @@
               class="h-72 w-80 mx-auto"
             />
           </div>
-          <div class="w-full md:w-1/2 mt-10 md:mt-0">
-            <h6 class="text-2xl md:text-2xl">Kontrack</h6>
 
-            <p class="my-4">
-              Kontrack is a solution designed for employers and job seekers to
-              eliminate the wait time in filling vacant positions and finding
-              opportunities and managing temporary employees or jobs.
-            </p>
+          <div class="w-full md:w-1/2 mt-10 md:mt-0 block md:flex items-center">
+            <div>
+              <h6 class="text-2xl md:text-2xl">Kontrack</h6>
 
-            <router-link class="link-btn text-sm md:text-lg" to="#">
-              View Project
-            </router-link>
+              <p class="my-4">
+                Kontrack is a solution designed for employers and job seekers to
+                eliminate the wait time in filling vacant positions and finding
+                opportunities and managing temporary employees or jobs.
+              </p>
+
+              <router-link class="link-btn text-sm md:text-lg" to="#">
+                View Project
+              </router-link>
+            </div>
           </div>
         </div>
 
@@ -49,18 +52,21 @@
               class="h-72 w-80 mx-auto"
             />
           </div>
-          <div class="w-full md:w-1/2 mt-10 md:mt-0">
-            <h6 class="text-2xl md:text-2xl">University Suite</h6>
 
-            <p class="my-4">
-              The university suite was designed and developed to make academic
-              and non academic process better and faster for students and staff
-              as well in instituions around the country.
-            </p>
+          <div class="w-full md:w-1/2 mt-10 md:mt-0 block md:flex items-center">
+            <div>
+              <h6 class="text-2xl md:text-2xl">University Suite</h6>
 
-            <router-link class="link-btn text-sm md:text-lg" to="#">
-              View Project
-            </router-link>
+              <p class="my-4">
+                The university suite was designed and developed to make academic
+                and non academic process better and faster for students and
+                staff as well in instituions around the country.
+              </p>
+
+              <router-link class="link-btn text-sm md:text-lg" to="#">
+                View Project
+              </router-link>
+            </div>
           </div>
         </div>
       </section>

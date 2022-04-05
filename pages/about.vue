@@ -4,15 +4,16 @@
 
     <main class="w-5/6 mx-auto">
       <section class="mt-14 md:mt-8 block md:flex justify-between">
-        <div class="w-full md:w-2/6 block md:flex items-center">
+        <div class="w-full md:w-4/12 block md:flex items-center">
+          <!-- <div class="w-full md:w-2/6 block md:flex items-center"> -->
           <img
             src="@/assets/images/dhabs.png"
             alt="Dhabs Picture"
-            class="h-80 w-72 mx-auto"
+            class="h-auto w-full m-auto"
           />
         </div>
 
-        <div class="mt-14 md:mt-0 w-full md:w-4/6 pl-0 md:pl-11">
+        <div class="mt-14 md:mt-0 w-full md:w-8/12 pl-0 md:pl-11">
           <h1 class="text-7xl md:text-9xl">About me</h1>
 
           <article class="text-xs md:text-base mt-5">
@@ -159,6 +160,7 @@ li {
 li p {
   font-weight: 350;
   margin: 10px 0;
+  color: var(--font-gray);
 }
 button {
   border: 0.6px solid var(--font-main);
