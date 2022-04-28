@@ -2,7 +2,7 @@
   <div class="body">
     <Top />
 
-    <main class="w-5/6 mx-auto">
+    <main class="w-5/6 mx-auto slidesIns">
       <section class="mt-14 md:mt-8 block md:flex justify-between">
         <div class="w-full md:w-4/12 block md:flex items-center">
           <!-- <div class="w-full md:w-2/6 block md:flex items-center"> -->
@@ -122,7 +122,7 @@
       </section>
 
       <section class="mt-11 flex justify-center">
-        <button class="px-12 py-6 text-sm md:text-lg">Download Resume</button>
+        <button class="px-12 py-4 text-sm md:text-lg">Download Resume</button>
       </section>
     </main>
 
@@ -167,6 +167,16 @@ button {
   box-sizing: border-box;
   border-radius: 5px;
   font-weight: 400;
+  transition-property: color, background-color;
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
+}
+button:hover {
+  background-color: var(--font-active);
+  color: var(--bg-color);
+  transition-property: color, background-color;
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
 }
 @media (min-width: 768px) {
   article {
@@ -176,5 +186,9 @@ button {
     width: 474px;
     height: 564px;
   }
+}
+.slidesIns {
+  animation: slideInLeft;
+  animation-duration: 1s;
 }
 </style>

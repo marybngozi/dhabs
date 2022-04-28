@@ -1,13 +1,13 @@
 <template>
   <header
-    class="relative w-full flex justify-center items-end h-32 md:h-52 md:items-center"
+    class="relative w-full flex justify-center items-end h-28 md:h-52 md:items-center"
   >
     <div class="w-full flex flex-col justify-end items-center">
       <router-link to="/" class="flex justify-center">
-        <Logo />
+        <Logo class="slidesIn" />
       </router-link>
 
-      <nav class="w-full flex justify-center gap-1 mt-2.5">
+      <nav class="w-full flex justify-center gap-1 mt-2.5 fadesIns">
         <router-link v-if="pathName != 'about'" class="px-2" to="/about">
           About
         </router-link>
@@ -45,5 +45,13 @@ export default {
 <style scoped>
 a:hover {
   color: var(--font-active);
+}
+.slidesIn {
+  animation: backInDown;
+  animation-duration: 1s;
+}
+.fadesIns {
+  animation: fadeIn;
+  animation-duration: 3.6s;
 }
 </style>

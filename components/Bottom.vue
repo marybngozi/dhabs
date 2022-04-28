@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="w-5/6 mx-auto flex flex-col gap-14 md:flex-row md:gap-0 md:justify-between"
+    class="w-5/6 mx-auto flex flex-col gap-14 md:flex-row md:gap-0 md:justify-between slidesBts"
   >
     <div class="flex justify-center flex-col items-center md:items-start">
       <h6 class="t-gray">Let's connect</h6>
@@ -15,22 +15,38 @@
           </span>
         </a>
 
-        <a href="https://twitter.com/UzohDhabs" target="_blank">
+        <a
+          href="https://twitter.com/UzohDhabs"
+          target="_blank"
+          class="social-link"
+        >
           <span class="icon">
             <i class="fa-brands fa-twitter"></i>
           </span>
         </a>
-        <a href="https://instagram.com/uzohdhabs" target="_blank">
+        <a
+          href="https://instagram.com/uzohdhabs"
+          target="_blank"
+          class="social-link"
+        >
           <span class="icon">
             <i class="fa-brands fa-instagram"></i>
           </span>
         </a>
-        <a href="https://linkedin.com/in/uzohdhabslinked" target="_blank">
+        <a
+          href="https://linkedin.com/in/uzohdhabslinked"
+          target="_blank"
+          class="social-link"
+        >
           <span class="icon">
             <i class="fa-brands fa-linkedin"></i>
           </span>
         </a>
-        <a href="https://behance.net/uzohdhabs" target="_blank">
+        <a
+          href="https://behance.net/uzohdhabs"
+          target="_blank"
+          class="social-link"
+        >
           <span class="icon">
             <i class="fa-brands fa-behance-square"></i>
           </span>
@@ -67,5 +83,23 @@ h6 {
 }
 .t-gray {
   color: var(--font-gray);
+}
+.social-link {
+  text-decoration: none;
+}
+.social-link:hover,
+.social-link:active {
+  color: var(--font-active);
+  transition: color 0.5s;
+}
+.slidesBts {
+  animation: slideInRight;
+  animation-duration: 1.3s;
+}
+@media (min-width: 768px) {
+  .slidesBts {
+    animation: slideInUp;
+    animation-duration: 1.4s;
+  }
 }
 </style>

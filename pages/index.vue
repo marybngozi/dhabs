@@ -1,28 +1,30 @@
 <template>
   <div id="body" class="body">
     <div class="flex justify-center mt-16">
-      <Logo />
+      <Logo class="slidesIn" />
     </div>
 
     <div class="flex items-center justify-center">
-      <p class="text-sm md:text-xl">
+      <p class="text-sm md:text-xl fadesIns">
         Hi, my name is Dhabs, I'm a UI/UX designer
       </p>
     </div>
 
     <nav class="flex flex-col justify-center items-center">
       <div>
-        <router-link class="link-big text-4xl md:text-5xl" to="/about"
+        <router-link class="link-big text-4xl md:text-5xl fadesIns" to="/about"
           >About me</router-link
         >
       </div>
       <div>
-        <router-link class="link-big text-4xl md:text-5xl" to="works/"
+        <router-link class="link-big text-4xl md:text-5xl fadesIns" to="works/"
           >Works</router-link
         >
       </div>
       <div>
-        <router-link class="link-big text-4xl md:text-5xl" to="/contact"
+        <router-link
+          class="link-big text-4xl md:text-5xl fadesIns"
+          to="/contact"
           >Contact</router-link
         >
       </div>
@@ -68,5 +70,14 @@ nav div {
 .link-big:hover,
 .link-big:active {
   color: var(--font-active);
+  transition: color 0.5s;
+}
+.slidesIn {
+  animation: backInDown;
+  animation-duration: 1s;
+}
+.fadesIns {
+  animation: fadeIn;
+  animation-duration: 3.6s;
 }
 </style>

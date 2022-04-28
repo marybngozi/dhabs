@@ -28,7 +28,7 @@ export default {
   loading: "~/components/loading.vue",
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["@/assets/css/main.css"],
+  css: ["@/assets/css/main.css", "animate.css/animate.min.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [{ src: "~/plugins/vuex-persist", ssr: false }],

@@ -2,8 +2,10 @@
   <div class="body">
     <Top />
 
-    <main class="w-5/6 mx-auto mt-16 block md:flex justify-between">
-      <div class="w-full md:w-4/6 pr-7 block md:flex flex-col justify-center">
+    <main class="w-5/6 mx-auto mt-10 md:mt-16 block md:flex justify-between">
+      <div
+        class="w-full md:w-4/6 pr-7 block md:flex flex-col justify-center slidesRights"
+      >
         <h2 class="text-2xl md:text-3xl mb-7">Say hello <span>👋</span></h2>
 
         <p class="mb-2">
@@ -21,11 +23,10 @@
         </p>
         <br />
 
-        <p>
+        <p class="mb-5">
           Or connect with me on all socials
           <span class="t-yellow">@uzohdhabs</span>
         </p>
-        <br /><br />
 
         <p>Attributes:</p>
         <p>
@@ -36,7 +37,7 @@
         </p>
       </div>
 
-      <div class="mt-16 md:mt-0 w-full md:w-2/6">
+      <div class="mt-14 md:mt-0 w-full md:w-2/6 slidesLefts">
         <img
           src="@/assets/images/dhabs_emoji.svg"
           alt="Dhabs Emoji"
@@ -74,9 +75,25 @@ p {
 .t-yellow {
   color: var(--font-yellow);
 }
+.slidesLefts {
+  animation: slideInLeft;
+  animation-duration: 1.3s;
+}
+.slidesRights {
+  animation: slideInRight;
+  animation-duration: 1.3s;
+}
 @media (min-width: 768px) {
   p {
     line-height: 27px;
+  }
+  .slidesRights {
+    animation: slideInLeft;
+    animation-duration: 1.4s;
+  }
+  .slidesLefts {
+    animation: slideInRight;
+    animation-duration: 1.4s;
   }
 }
 </style>
