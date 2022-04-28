@@ -167,14 +167,15 @@ button {
   box-sizing: border-box;
   border-radius: 5px;
   font-weight: 400;
-  transition-property: color, background-color;
+  transition-property: border, color, "background-color";
   transition-duration: 1s;
   transition-timing-function: ease-in;
 }
 button:hover {
+  border: 0.6px solid var(--font-active);
   background-color: var(--font-active);
   color: var(--bg-color);
-  transition-property: color, background-color;
+  transition-property: border, color, "background-color";
   transition-duration: 1s;
   transition-timing-function: ease-in;
 }
