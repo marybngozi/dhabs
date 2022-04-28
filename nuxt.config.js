@@ -17,7 +17,12 @@ export default {
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     //Global JS
-    // script: [{ src: "/js/main.js" }],
+    script: [
+      {
+        src: "https://kit.fontawesome.com/90259c5e03.js",
+        crossorigin: "anonymous",
+      },
+    ],
   },
 
   loading: "~/components/loading.vue",
@@ -36,7 +41,6 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
-    "@nuxtjs/fontawesome",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -46,17 +50,6 @@ export default {
     // https://go.nuxtjs.dev/pwa
     "@nuxtjs/pwa",
   ],
-
-  serverMiddleware: {
-    "/api": "~/api",
-  },
-
-  fontawesome: {
-    icons: {
-      solid: true,
-      brands: true,
-    },
-  },
 
   colorMode: {
     preference: "dark",
@@ -78,10 +71,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    postcss: {
-      plugins: {
-        "postcss-custom-properties": false,
-      },
-    },
+    // postcss: {
+    //   plugins: {
+    //     "postcss-custom-properties": false,
+    //   },
+    // },
   },
 };

@@ -11,28 +11,28 @@
           class="social-link"
         >
           <span class="icon">
-            <font-awesome-icon :icon="['fas', 'envelope']" />
+            <i class="fa-solid fa-envelope"></i>
           </span>
         </a>
 
         <a href="https://twitter.com/UzohDhabs" target="_blank">
           <span class="icon">
-            <font-awesome-icon :icon="['fab', 'twitter']" />
+            <i class="fa-brands fa-twitter"></i>
           </span>
         </a>
         <a href="https://instagram.com/uzohdhabs" target="_blank">
           <span class="icon">
-            <font-awesome-icon :icon="['fab', 'instagram']" />
+            <i class="fa-brands fa-instagram"></i>
           </span>
         </a>
         <a href="https://linkedin.com/in/uzohdhabslinked" target="_blank">
           <span class="icon">
-            <font-awesome-icon :icon="['fab', 'linkedin']" />
+            <i class="fa-brands fa-linkedin"></i>
           </span>
         </a>
         <a href="https://behance.net/uzohdhabs" target="_blank">
           <span class="icon">
-            <font-awesome-icon :icon="['fab', 'behance-square']" />
+            <i class="fa-brands fa-behance-square"></i>
           </span>
         </a>
       </div>
